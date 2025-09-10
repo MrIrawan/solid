@@ -28,17 +28,17 @@ export default function Navbar() {
                 <NavigationMenuList>
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                            <Link href={"#about us"} className={"text-lg font-semibold"}>about us</Link>
+                            <Link href={"#about us"} className={"text-lg font-semibold font-main-semibold"}>about us</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                            <Link href={"/solved-problem"} className={"text-lg font-semibold"}>what we solve</Link>
+                            <Link href={"/solved-problem"} className={"text-lg font-semibold font-main-semibold"}>what we solve</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                           <Link href={"/solutions"} className={"text-lg font-semibold"}>get solutions</Link>
+                           <Link href={"/solutions"} className={"text-lg font-semibold font-main-semibold"}>get solutions</Link>
                        </NavigationMenuLink>
                     </NavigationMenuItem>
                 </NavigationMenuList>
@@ -46,7 +46,7 @@ export default function Navbar() {
             <div className={"w-fit"}>
                 <Link href={"/contact"}>
                     <Button className={"rounded-full px-6 py-2.5 bg-linear-to-r/oklch from-[#7ed957] to-[#00bf36]"}>
-                        <p className={"text-base text-[#1e1e1e]"}>contact us</p>
+                        <p className={"text-base text-[#1e1e1e] font-main-semibold"}>contact us</p>
                     </Button>
                 </Link>
             </div>

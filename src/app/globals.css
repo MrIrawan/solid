@@ -112,6 +112,30 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@font-face {
+    font-family: "main-regular";
+    src: url("../../public/fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+    font-family: "main-medium";
+    src: url("../../public/fonts/Montserrat-Medium.ttf");
+}
+@font-face {
+    font-family: "main-semibold";
+    src: url("../../public/fonts/Montserrat-SemiBold.ttf");
+}
+@font-face {
+    font-family: "main-bold";
+    src: url("../../public/fonts/Montserrat-Bold.ttf");
+}
+
+@theme {
+    --font-main-regular: main-regular;
+    --font-main-medium: main-medium;
+    --font-main-semibold: main-semibold;
+    --font-main-bold: main-bold;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
