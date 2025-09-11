@@ -163,6 +163,13 @@
     --color-custom-accent-foreground: #155DFC;
 }
 
+.bg-pattern {
+  background-image: url("../../public/images/blob.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
