@@ -129,11 +129,38 @@
     src: url("../../public/fonts/Montserrat-Bold.ttf");
 }
 
+@font-face {
+  font-family: alternate-regular;
+  src: url("../../public/fonts/MontserratAlternates-Regular.ttf");
+}
+@font-face {
+  font-family: alternate-medium;
+  src: url("../../public/fonts/MontserratAlternates-Medium.ttf");
+}
+@font-face {
+  font-family: alternate-semibold;
+  src: url("../../public/fonts/MontserratAlternates-SemiBold.ttf");
+}
+@font-face {
+  font-family: alternate-bold;
+  src: url("../../public/fonts/MontserratAlternates-Bold.ttf");
+}
+
 @theme {
     --font-main-regular: main-regular;
     --font-main-medium: main-medium;
     --font-main-semibold: main-semibold;
     --font-main-bold: main-bold;
+    --font-alternate-regular: alternate-regular;
+    --font-alternate-medium: alternate-medium;
+    --font-alternate-semibold: alternate-semibold;
+    --font-alternate-bold: alternate-bold;
+    --color-custom-primary: #155DFC;
+    --color-custom-secondary: #DBEAFE;
+    --color-custom-base: #ffffff;
+    --color-custom-base-foregrouund: #EFF6FF;
+    --color-custom-accent: #DBEAFE;
+    --color-custom-accent-foreground: #155DFC;
 }
 
 @layer base {
