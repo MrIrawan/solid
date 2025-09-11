@@ -1,11 +1,14 @@
 import Link from "next/link"
 
+import { Separator } from "@/components/ui/separator"
+
 export default function Home() {
     return (
         <>
             <section className="w-full h-screen">
-                <div className="container mx-auto h-full bg-gray-300 flex items-center">
-                    <div className="w-full h-1/2 bg-white flex flex-col items-center justify-center gap-6 px-6">
+                <div className="container mx-auto h-full bg-custom-base flex flex-col items-center justify-center">
+                    <Separator orientation="horizontal"/>
+                    <div className="w-full h-1/2 bg-linear-60 from-custom-base to-custom-base-foregrouund flex flex-col items-center justify-center gap-6 px-6">
                         <div className="w-fit px-6 py-1 bg-[#DBEAFE] rounded-full">
                             <p className="text-base text-[#155DFC] font-main-semibold">fast, flexible, and ready-to-use digital solutions</p>
                         </div>
@@ -24,6 +27,7 @@ export default function Home() {
                             </Link>
                         </div>
                     </div>
+                    <Separator orientation="horizontal"/>
                 </div>
             </section>
         </>
