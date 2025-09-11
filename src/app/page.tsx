@@ -43,6 +43,22 @@ export default function Home() {
                 </div>
                 <Separator orientation="vertical" className="hidden lg:block"/>
             </section>
+            <section className="w-full h-36 flex flex-col items-center justify-between">
+                <Separator orientation="horizontal"/>
+                <Separator orientation="horizontal"/>
+            </section>
+            <section className="h-screen w-full flex items-center justify-center">
+                <Separator orientation="vertical"/>
+                <div className="container h-full flex flex-col items-center justify-center">
+                    <div className="w-full h-1/2 bg-custom-base flex items-center justify-between">
+                        <div className="w-1/2 h-full"></div>
+                        <div className="w-1/2 h-full"></div>
+                    </div>
+                    <Separator />
+                    <div className="w-full h-1/2 bg-custom-base"></div>
+                </div>
+                <Separator orientation="vertical"/>
+            </section>
         </>
     )
 }
