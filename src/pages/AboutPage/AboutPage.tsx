@@ -5,14 +5,12 @@ import AboutPageImage from "../../../public/images/Software Development.svg"
 
 export default function AboutPage() {
     return (
-        <section className="w-full h-screen my-36" id="about">
-                <div className="container mx-auto h-full flex flex-col justify-center items-center">
-                    <div className="w-full h-full flex flex-col items-center justify-center gap-6 lg:h-1/2 lg:flex-row">
-                        <div className="w-full h-full flex flex-col gap-4 px-3 lg:px-0">
-                            <div className="w-fit px-6 py-1.5 rounded-full bg-custom-accent">
-                                <p className="text-base font-main-medium text-custom-primary">let's learn about solid</p>
-                            </div>
-                            <h2 className="text-4xl font-main-bold text-black">Your Bridge from Ideas to Digital Reality.</h2>
+        <section className="w-full h-screen my-28" id="about">
+            <div className="container mx-auto h-full">
+                <div className="w-full h-full flex items-center justify-center">
+                    <div className="w-1/2 h-1/2 flex flex-col gap-6">
+                        <h3 className="text-custom-primary text-2xl font-main-semibold">let's learn about solid</h3>
+                        <h2 className="text-4xl font-main-bold text-black">Your Bridge from Ideas to Digital Reality.</h2>
                             <div className="w-full flex flex-col justify-center gap-4">
                                 <p className="text-base font-main-medium">
                                     Solid is a digital solutions company that helps businesses
@@ -36,17 +34,16 @@ export default function AboutPage() {
                                     you can focus on running your business while we handle the technical side.
                                 </p>
                             </div>
-                        </div>
-                        <div className="w-full h-full relative">
-                            <Image 
-                                src={AboutPageImage}
-                                alt="man-smile-image"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
                     </div>
-                    <div className="hidden w-full h-1/2 bg-custom-base lg:block"></div>
+                    <div className="w-1/2 h-1/2">
+                        <Image 
+                            src={AboutPageImage}
+                            alt="about page image"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
     )
 }
