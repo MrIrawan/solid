@@ -5,8 +5,9 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 
-import { ZapIcon } from "lucide-react";
+import { ArrowUpRightIcon, ZapIcon } from "lucide-react";
 import { UnplugIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function ServicePage() {
     return (
@@ -62,7 +63,7 @@ export default function ServicePage() {
                             </p>
                         </div>
                     </article>
-                    <article className="w-full ring ring-custom-accent h-96 rounded-xl flex flex-col overflow-hidden">
+                    <article className="w-full ring ring-custom-accent h-96 rounded-xl flex flex-col overflow-hidden relative group">
                         <div className="w-full h-1/2 overflow-hidden">
                             <Image 
                                 src={""}
@@ -75,6 +76,19 @@ export default function ServicePage() {
                             <p className="text-base font-main-medium">
                                 We cover everything from digital strategy to execution. With Solid Consult and Solid Build, you get a complete journey from planning to launch without juggling multiple vendors.
                             </p>
+                        </div>
+                        <div className="w-full flex justify-end absolute bottom-0 p-1.5 translate-y-full opacity-50 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+                            <Link href={""} className="w-fit flex items-center">
+                                <Button 
+                                    className="w-fit px-6 py-1.5 bg-custom-accent-foreground rounded-full"
+                                    size={"sm"}
+                                >
+                                    <p className="text-base font-main-semibold text-custom-base">read more</p>
+                                </Button>
+                                <span className="w-9 h-9 rounded-full bg-custom-accent-foreground flex items-center justify-center">
+                                    <ArrowUpRightIcon className="w-7 h-7 text-custom-base"/>
+                                </span>
+                            </Link>
                         </div>
                     </article>
                 </div>
