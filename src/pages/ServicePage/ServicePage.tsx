@@ -1,6 +1,6 @@
 import Image from "next/image";
-import ServiceImageMeeting from "../../../public/images/service-image-1.jpg"
-import ServiceImageSupport from "../../../public/images/service-image-2.jpg"
+// import ServiceImageMeeting from "../../../public/images/service-image-1.jpg"
+// import ServiceImageSupport from "../../../public/images/service-image-2.jpg"
 
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
@@ -21,7 +21,7 @@ export default function ServicePage() {
                     <article className="w-full ring ring-custom-accent h-96 rounded-xl flex flex-col overflow-hidden">
                         <div className="w-full h-1/2 overflow-hidden">
                             <Image 
-                                src={ServiceImageSupport}
+                                src={""}
                                 alt="image-123"
                             />
                         </div>
@@ -50,7 +50,7 @@ export default function ServicePage() {
                     <article className="w-full ring ring-custom-accent h-96 rounded-xl flex flex-col overflow-hidden">
                         <div className="w-full h-1/2 overflow-hidden">
                             <Image 
-                                src={ServiceImageSupport}
+                                src={""}
                                 alt="image-123"
                             />
                         </div>
@@ -65,7 +65,7 @@ export default function ServicePage() {
                     <article className="w-full ring ring-custom-accent h-96 rounded-xl flex flex-col overflow-hidden">
                         <div className="w-full h-1/2 overflow-hidden">
                             <Image 
-                                src={ServiceImageSupport}
+                                src={""}
                                 alt="image-123"
                             />
                         </div>
