@@ -3,4 +3,5 @@ export interface staticFeaturesData {
     title: string;
     description: string;
     image: string;
+    icon: string;
 }
