@@ -2,9 +2,9 @@ import { staticFeatures } from "../../../public/data/static-features";
 
 import FeatureCard from "@/components/FeatureCard/FeatureCard";
 
-export default function ServicePage() {
+export default function CoreFeaturePage() {
     return (
-        <section className="w-full h-fit py-10">
+        <section className="w-full h-fit py-60 bg-gradient-to-t from-custom-accent to-custom-base">
             <div className="container mx-auto flex flex-col gap-10 px-3">
                 <div className="flex flex-col gap-4 items-center">
                     <p className="text-base font-main-semibold text-custom-primary w-fit px-6 py-1.5 rounded-full bg-custom-accent">our core feature's that you should know</p>
