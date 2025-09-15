@@ -11,25 +11,29 @@ export function staticFeatures(): staticFeaturesData[] {
             id: 1,
             title: "End-to-End Digital Support",
             description: "We cover everything from digital strategy to execution. With Solid Consult and Solid Build, you get a complete journey from planning to launch without juggling multiple vendors.",
-            image: featureImage1.src
+            image: featureImage1.src,
+            icon: "ClockFadingIcon"
         },
         {
             id: 2,
             title: "Fast & Flexible Delivery",
             description: "Our process prioritizes speed and adaptability. Whether you need a quick launch or a scalable long-term plan, Solid delivers on time.",
-            image: featureImage2.src
+            image: featureImage2.src,
+            icon: "ZapIcon"
         },
         {
             id: 3,
             title: "Custom-Tailored Solutions",
             description: "Every business is unique. We design and build digital solutions that fit your exact needs, not cookie-cutter templates.",
-            image: featureImage3.src
+            image: featureImage3.src,
+            icon: "BlocksIcon"
         },
         {
             id: 4,
             title: "Bridge for Non-Tech Entrepreneurs",
             description: "We simplify technology for you. Focus on your business goals while we handle the technical heavy lifting.",
-            image: featureImage4.src
+            image: featureImage4.src,
+            icon: "WaypointsIcon"
         },
     ]
 }
