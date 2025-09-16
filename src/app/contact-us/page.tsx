@@ -1,88 +1,92 @@
-"use client";
+// app/contact/page.tsx (Next.js 13+ App Router)
 
-import InputGroup from "@/components/InputGroup/InputGroup";
+export default function ContactPage() {
+  return (
+    <div
+      className="min-h-screen flex items-center justify-center px-4 py-12 bg-cover bg-center"
+      style={{ backgroundImage: "url('/stacked-waves-haikei.svg')" }}
+    >
+      <div className="max-w-6xl w-full bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+        
+        {/* Left Side */}
+        <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white p-10 flex flex-col justify-center">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 drop-shadow-lg">
+            Let’s get in touch
+          </h2>
+          <p className="text-base md:text-lg mb-6 text-blue-100 leading-relaxed">
+            We'd love to hear from you. Fill out the form and our team will get
+            back to you as soon as possible.
+          </p>
+          <div className="mt-6 space-y-3 text-sm md:text-base">
+            <p>📍Indonesia, Jawa Barat, Kota Bekasi, Bekasi Barat</p>
+            <p>
+              <a
+                href="mailto:Solid@gmail.com"
+                className="text-blue-200 hover:text-white underline transition"
+              >
+                📧 Solid@gmail.com
+              </a>
+            </p>
+            <p>📞+62 812-3456-7890</p>
+          </div>
+        </div>
 
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
-import { Textarea } from "@/components/ui/textarea";
+        {/* Right Side - Contact Form */}
+        <div className="p-10 bg-white">
+          <form className="space-y-6">
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1">
+                Full Name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your full name"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+              />
+            </div>
 
-export default function ContactUsPage() {
-    return (
-        <>
-            <section className="w-full h-screen lg:flex lg:items-center lg:justify-center">
-                <Separator orientation="vertical" className="hidden lg:block"/>
-                    <div className="container mx-auto lg:mx-0 h-full flex items-center justify-center lg:flex-col">
-                        <Separator orientation="horizontal" className="hidden lg:block"/>
-                        <div className="w-fit h-fit flex flex-col gap-6 px-6 py-6">
-                            <div className="flex flex-col items-center gap-3">
-                                <div className="w-fit px-6 py-1.5 bg-custom-accent rounded-full">
-                                    <p className="text-base font-main-semibold text-custom-primary">contact us</p>
-                                </div>
-                                <h2 className="text-4xl font-main-bold text-center">let's get in touch</h2>
-                                <p className="text-base font-main-medium text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, animi.</p>
-                            </div>
-                            <form action="" className="w-full flex flex-col gap-4">
-                                <div className="flex flex-col gap-1">
-                                    <InputGroup
-                                        htmlFor="full_name"
-                                        labelStyle="text-base font-main-semibold text-custom-primary flex items-center gap-1"
-                                        inputStyle="ring ring-custom-accent font-main-regular placeholder:font-main-regular rounded-full focus-visible:ring-2 focus-visible:ring-custom-accent focus-visible:outline-none"
-                                        placeholder="enter your full name..."
-                                        type="text"
-                                    >
-                                        full name <span className="text-destructive">*</span>
-                                    </InputGroup>
-                                </div>
-                                <div className="flex flex-col gap-1">
-                                    <InputGroup
-                                        htmlFor="email_adress"
-                                        labelStyle="text-base font-main-semibold text-custom-primary flex items-center gap-1"
-                                        inputStyle="ring ring-custom-accent font-main-regular placeholder:font-main-regular rounded-full focus-visible:ring-2 focus-visible:ring-custom-accent focus-visible:outline-none"
-                                        placeholder="enter your email..."
-                                        type="email"
-                                    >
-                                        email adress <span className="text-destructive">*</span>
-                                    </InputGroup>
-                                </div>
-                                <div className="flex flex-col gap-1">
-                                    <InputGroup
-                                        htmlFor="company_name"
-                                        labelStyle="text-base font-main-semibold text-custom-primary flex items-center gap-1"
-                                        inputStyle="ring ring-custom-accent font-main-regular placeholder:font-main-regular rounded-full focus-visible:ring-2 focus-visible:ring-custom-accent focus-visible:outline-none"
-                                        placeholder="enter your company name..."
-                                        type="text"
-                                    >
-                                        company name <span className="text-destructive">*</span>
-                                    </InputGroup>
-                                </div>
-                                <div className="flex flex-col gap-1">
-                                    <Label 
-                                        htmlFor="message" 
-                                        className="text-base font-main-semibold text-custom-primary"
-                                    >
-                                        your message
-                                    </Label>
-                                    <Textarea 
-                                        placeholder="enter your message..." 
-                                        className="font-main-regular ring ring-custom-accent focus-visible:ring-2 focus-visible:ring-custom-accent focus-visible:outline-none placeholder:font-main-regular max-h-32"
-                                    />
-                                    <p className="font-main-regular text-muted-foreground text-sm">Your message will be copied to the support team.</p>
-                                </div>
-                                <div className="w-full flex items-center justify-center mt-6">
-                                    <Button 
-                                        className="w-full text-base font-main-medium rounded-full text-custom-base"
-                                        size={"lg"}
-                                    >
-                                        send your message
-                                    </Button>
-                                </div>
-                            </form>
-                        </div>
-                        <Separator orientation="horizontal" className="hidden lg:block"/>
-                    </div>
-                <Separator orientation="vertical" className="hidden lg:block"/>
-            </section>
-        </>
-    );
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1">
+                Email Address <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1">
+                Company Name
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your company name"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1">
+                Your Message
+              </label>
+              <textarea
+                rows={4}
+                placeholder="Write your message..."
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-105"
+            >
+              Send Message ✨
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 }
