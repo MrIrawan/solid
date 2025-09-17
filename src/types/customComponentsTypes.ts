@@ -9,4 +9,5 @@ export interface InputGroupProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export interface MessageBoxProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     children: React.ReactNode;
+    labelStyle: string;
 }

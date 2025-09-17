@@ -1,6 +1,7 @@
 "use client"
 
 import InputGroup from "@/components/InputGroup/InputGroup";
+import MessageBox from "@/components/MessageBox/MessageBox";
 
 import { Button } from "@/components/ui/button";
 
@@ -42,7 +43,7 @@ export default function ContactPage() {
               <InputGroup
                 type="text"
                 labelStyle="text-sm font-main-semibold text-black"
-                inputStyle="placeholder:font-main-medium font-main-regular"
+                inputStyle="placeholder:font-main-medium font-main-regular px-3 py-5 rounded-sm"
                 htmlFor="full_name"
               >
                 full name
@@ -52,7 +53,7 @@ export default function ContactPage() {
               <InputGroup
                 type="email"
                 labelStyle="text-sm font-main-semibold text-black"
-                inputStyle="placeholder:font-main-medium font-main-regular"
+                inputStyle="placeholder:font-main-medium font-main-regular px-3 py-5 rounded-sm"
                 htmlFor="email_address"
               >
                 email address
@@ -63,21 +64,29 @@ export default function ContactPage() {
               <InputGroup
                 type="text"
                 labelStyle="text-sm font-main-semibold text-black"
-                inputStyle="placeholder:font-main-medium font-main-regular"
+                inputStyle="placeholder:font-main-medium font-main-regular px-3 py-5 rounded-sm"
                 htmlFor="company_name"
               >
                 company / organization name
               </InputGroup>
             </div>
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1 font-main-semibold">
-                Your Message
-              </label>
-              <textarea
-                rows={4}
-                placeholder="Write your message..."
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition font-main-regular placeholder:font-main-medium"
-              ></textarea>
+            <div className="flex flex-col gap-2">
+              <InputGroup
+                type="text"
+                labelStyle="text-sm font-main-semibold text-black"
+                inputStyle="placeholder:font-main-medium font-main-regular px-3 py-5 rounded-sm"
+                htmlFor="subject_message"
+              >
+                subject message
+              </InputGroup>
+            </div>
+            <div className="flex flex-col gap-2">
+              <MessageBox
+                labelStyle="text-sm font-main-semibold text-black"
+                className="min-h-44 max-h-60"
+              >
+                your message
+              </MessageBox>
             </div>
 
             <button

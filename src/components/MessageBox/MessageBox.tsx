@@ -1,11 +1,17 @@
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 
-export default function MessageBox() {
+import { MessageBoxProps } from "@/types/customComponentsTypes";
+
+export default function MessageBox({
+    children,
+    labelStyle,
+    ...props
+} : MessageBoxProps) {
     return (
         <>
-            <Label></Label>
-            <Textarea />
+            <Label className={labelStyle}>{children}</Label>
+            <Textarea {...props}/>
         </>
     )
 }
