@@ -1,5 +1,9 @@
 "use client"
 
+import InputGroup from "@/components/InputGroup/InputGroup";
+
+import { Button } from "@/components/ui/button";
+
 export default function ContactPage() {
   return (
     <div
@@ -34,39 +38,37 @@ export default function ContactPage() {
         {/* Right Side - Contact Form */}
         <div className="p-10 bg-custom-base from-custom-base to-custom-accent">
           <form className="space-y-6">
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1 font-main-semibold">
-                Full Name <span className="text-red-500">*</span>
-              </label>
-              <input
+            <div className="flex flex-col gap-2">
+              <InputGroup
                 type="text"
-                placeholder="Enter your full name"
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition font-main-regular placeholder:font-main-medium"
-              />
+                labelStyle="text-sm font-main-semibold text-black"
+                inputStyle="placeholder:font-main-medium font-main-regular"
+                htmlFor="full_name"
+              >
+                full name
+              </InputGroup>
             </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1 font-main-semibold">
-                Email Address <span className="text-red-500">*</span>
-              </label>
-              <input
+            <div className="flex flex-col gap-2">
+              <InputGroup
                 type="email"
-                placeholder="Enter your email"
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition font-main-regular placeholder:font-main-medium"
-              />
+                labelStyle="text-sm font-main-semibold text-black"
+                inputStyle="placeholder:font-main-medium font-main-regular"
+                htmlFor="email_address"
+              >
+                email address
+              </InputGroup>
             </div>
 
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1 font-main-semibold">
-                Company Name
-              </label>
-              <input
+            <div className="flex flex-col gap-2">
+              <InputGroup
                 type="text"
-                placeholder="Enter your company name"
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition font-main-regular placeholder:font-main-medium"
-              />
+                labelStyle="text-sm font-main-semibold text-black"
+                inputStyle="placeholder:font-main-medium font-main-regular"
+                htmlFor="company_name"
+              >
+                company / organization name
+              </InputGroup>
             </div>
-
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1 font-main-semibold">
                 Your Message

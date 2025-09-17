@@ -1,7 +1,7 @@
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 
-import { InputGroupProps } from "@/types/types";
+import { InputGroupProps } from "@/types/customComponentsTypes";
 
 export default function InputGroup({
     children,
