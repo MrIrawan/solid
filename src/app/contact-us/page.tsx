@@ -59,12 +59,9 @@ export default function ContactPage() {
           </MessageBox>
         </div>
 
-        <button
-          type="submit"
-          className="w-full bg-custom-accent text-custom-accent-foreground py-3 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-105 font-main-medium"
-        >
-          Send Message ✨
-        </button>
+        <Button className="w-full h-11 text-base font-main-medium">
+          send your message
+        </Button>
       </form>
     </div>
   );
