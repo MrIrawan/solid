@@ -5,16 +5,30 @@ import MessageBox from "@/components/MessageBox/MessageBox";
 
 import { Button } from "@/components/ui/button";
 
+import { useForm, SubmitHandler } from "react-hook-form";
+import { ContactUsData } from "@/types/types";
+
 export default function ContactPage() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm<ContactUsData>();
+
+  const onSubmitHandler: SubmitHandler<ContactUsData> = (data) => {
+    console.log(data)
+  }
+
   return (
     <div className="p-10 bg-custom-base from-custom-base to-custom-accent">
-      <form className="space-y-6">
+      <form className="space-y-6" onSubmit={handleSubmit(onSubmitHandler)}>
         <div className="flex flex-col gap-2">
           <InputGroup
             type="text"
             labelStyle="text-sm font-main-semibold text-black"
             inputStyle="placeholder:font-main-medium font-main-regular px-3 py-5 rounded-sm"
             htmlFor="full_name"
+            {...register("full_name", {required: "full name is required", minLength: 3})}
           >
             full name
           </InputGroup>
@@ -25,6 +39,7 @@ export default function ContactPage() {
             labelStyle="text-sm font-main-semibold text-black"
             inputStyle="placeholder:font-main-medium font-main-regular px-3 py-5 rounded-sm"
             htmlFor="email_address"
+            {...register("email", {required: "email is required"})}
           >
             email address
           </InputGroup>
@@ -36,6 +51,7 @@ export default function ContactPage() {
             labelStyle="text-sm font-main-semibold text-black"
             inputStyle="placeholder:font-main-medium font-main-regular px-3 py-5 rounded-sm"
             htmlFor="company_name"
+            {...register("company_name")}
           >
             company / organization name
           </InputGroup>
@@ -46,6 +62,7 @@ export default function ContactPage() {
             labelStyle="text-sm font-main-semibold text-black"
             inputStyle="placeholder:font-main-medium font-main-regular px-3 py-5 rounded-sm"
             htmlFor="subject_message"
+            {...register("subject_message", {required: "subject message is required", minLength: 5})}
           >
             subject message
           </InputGroup>
@@ -54,6 +71,7 @@ export default function ContactPage() {
           <MessageBox
             labelStyle="text-sm font-main-semibold text-black"
             className="min-h-44 max-h-60"
+            {...register("message", {required: "message is required", minLength: 10})}
           >
             your message
           </MessageBox>
