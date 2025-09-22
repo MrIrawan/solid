@@ -170,6 +170,11 @@
   background-size: cover;
 }
 
+.bg-gradient {
+  background: #5E17EB;
+  background: linear-gradient(139deg, rgba(94, 23, 235, 1) 0%, rgba(212, 0, 255, 1) 100%);
+}
+
 .bg-sigit {
   background-image: url("../../public/images/stacked-waves-haikei.svg");
   background-repeat: no-repeat;
