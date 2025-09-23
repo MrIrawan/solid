@@ -5,6 +5,14 @@ export interface staticFeaturesData {
     icon: string;
 }
 
+export interface staticTestimonialData {
+    name: string;
+    role: string;
+    avatar: string;
+    testimonial: string;
+    stars: number;
+}
+
 export interface ContactUsData {
     full_name: string;
     email: string;
