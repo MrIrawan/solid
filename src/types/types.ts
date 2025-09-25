@@ -18,6 +18,9 @@ export interface staticWorkProccessData {
     title: string;
     description: string;
     image: string;
+    gridClassname: string;
+    titleClassname: string;
+    numberClassname: string;
 }
 
 export interface ContactUsData {
