@@ -13,6 +13,13 @@ export interface staticTestimonialData {
     stars: number;
 }
 
+export interface staticWorkProccessData {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+}
+
 export interface ContactUsData {
     full_name: string;
     email: string;
